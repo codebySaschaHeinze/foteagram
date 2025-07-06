@@ -50,7 +50,7 @@ footer {
 footer p {
   font-family: "pFont";
   color: rgb(228, 243, 177);
-  font-size: 1.7rem;
+  font-size: 1rem;
   font-weight: 200;
   margin-left: 24px;
   margin-right: 24px;
@@ -60,7 +60,7 @@ footer p {
 p {
   font-family: "pFont";
   color: rgb(228, 243, 177);
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 200;
   margin: 0px 24px 50px 24px;
 }

@@ -92,5 +92,4 @@ function prevImage(i) {
         <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
         <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt="">
       `;
-  console.log(i);
 }
