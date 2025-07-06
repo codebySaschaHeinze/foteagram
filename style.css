@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "logoFont";
+  src: url("./fonts/JuliusSansOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "pFont";
+  src: url("./fonts/SourGummy-VariableFont_wdth\,wght.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgb(43, 12, 7);
+}
+
+header {
+  height: 90px;
+  max-width: 100%;
+  background-color: rgb(34, 6, 2);
+  box-shadow: 0px 0px 15px 4px rgba(34, 6, 2, 0.8);
+}
+
+h2 {
+  font-family: "pFont";
+  color: rgb(228, 243, 177);
+  font-size: clamp(1rem, 2rem, 4rem);
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight: 200;
+  margin-top: 70px;
+}
+
+footer {
+  height: 80px;
+  max-width: 100%;
+  background-color: rgb(34, 6, 2);
+  box-shadow: 0px 0px 15px 4px rgba(34, 6, 2, 0.8);
+}
+
+footer p {
+  font-family: "pFont";
+  color: rgb(228, 243, 177);
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 15px;
+}
+
+p {
+  font-family: "pFont";
+  color: rgb(228, 243, 177);
+  font-size: 1.7rem;
+  font-weight: 200;
+  margin: 0px 24px 50px 24px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+}
+
+.footerText {
+  font-family: "logoFont";
+  color: rgb(228, 243, 177);
+  font-size: 1rem;
+  font-weight: 100;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.fotogramAndLogo {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: clamp(1px, 7vw, 60px);
+  font-family: "logoFont";
+  font-size: 0.8rem;
+  color: rgb(228, 243, 177);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  gap: 2px;
+}
+
+.logoImg {
+  height: 55px;
+  width: auto;
+  padding-bottom: 24px;
+  transform: rotate(7deg);
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#imageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 5vw 120px;
+}
+
+#imageContainer img {
+  width: clamp(130px, 12vw, 600px);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.6s;
+  margin: 16px;
+}
+
+#imageContainer img:hover {
+  transform: scale(1.075);
+}
+
+.overlay.d_none {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 85vh;
+  max-height: auto;
+  width: clamp(200px, 100%, 500px);
+  background-color: rgba(49, 15, 0, 0.9);
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+#overlayImage {
+  width: clamp(260px, 80%, 300px);
+  border-radius: 8px;
+  margin: 0 40px 30px 40px;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.5);
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 18px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 1 ease-in-out;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+.nextButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 32px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 2 ease-in-out;
+}
+
+.nextButton:hover {
+  transform: scale(1.1);
+}
+
+.prevButton {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  height: 32px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 2 ease-in-out;
+}
+
+.prevButton:hover {
+  transform: scale(1.1);
+}
+
+.overlayTextContainer {
+  font-size: 16px;
+  text-align: center;
+  margin: 0px, 20px, 40px, 20px;
+  padding-top: 10px;
+}
+
+.footerText {
+  font-family: "logoFont";
+  color: rgb(228, 243, 177);
+  font-size: 1rem;
+  font-weight: 100;
+  margin-left: 24px;
+  margin-right: 24px;
+}
