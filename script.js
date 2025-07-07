@@ -43,26 +43,20 @@ function renderImages() {
 }
 
 function showOverlay(i) {
-  let mainContainerVar = document.getElementById("mainContainer");
-
-  mainContainerVar.innerHTML += `
-      <div id="overlayContainer" class="overlay">
-        <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
+  let overlayContainerVar = document.getElementById("overlayContainer");
+  overlayContainerVar.classList.remove("d_none");
+  overlayContainerVar.innerHTML = /*html*/ `
+        <div class="addOverlay"><img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
         <p>${texts[i]}</p>
         <img onclick="nextImage(${i})" class="nextButton" id="nextButton" src="./img/next-button.png" alt="">
-        <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt="">
-      </div>;
-    `;
+        <img onclick="prevImage(${i})" class="prevButton" id="prevButton" src="./img/prev-button.png" alt=""></div>`;
 }
 
 function closeOverlay() {
-  document.getElementById("overlayContainer").classList.add("d_none");
-  document.getElementById(
-    "mainContainer"
-  ).innerHTML = `<h2>My fancy teacup collection</h2>
-      <div id="imageContainer"></div>`;
-  renderImages();
+  let hideOverlay = document.getElementById("overlayContainer");
+  hideOverlay.classList.add("d_none");
+  hideOverlay.innerHTML = "";
 }
 
 function nextImage(i) {
@@ -71,7 +65,7 @@ function nextImage(i) {
     i = 0;
   }
 
-  document.getElementById("overlayContainer").innerHTML = `
+  document.getElementById("overlayContainer").innerHTML = /*html*/ `
         <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
         <p>${texts[i]}</p>
@@ -82,10 +76,10 @@ function nextImage(i) {
 
 function prevImage(i) {
   i = i - 1;
-  if (i == 0) {
+  if (i < 0) {
     i = images.length - 1;
   }
-  document.getElementById("overlayContainer").innerHTML = `
+  document.getElementById("overlayContainer").innerHTML = /*html*/ `
         <img onclick="closeOverlay()" class="closeButton" src="./img/close-button.png" alt="">
         <img id="overlayImage" src="${images[i]}" alt="" />
         <p>${texts[i]}</p>
